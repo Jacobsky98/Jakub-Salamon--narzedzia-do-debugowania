@@ -6,6 +6,8 @@ command=$1
 if [ "$command" = "clone" ]; then
     echo [CLONE] Klonowanie repozytorium
     git clone https://github.com/Jacobsky98/Jakub-Salamon--narzedzia-do-debugowania.git
+    cd Jakub-Salamon--narzedzia-do-debugowania
+    chmod +x run_salamon_jakub.sh
 fi
 
 if [ "$command" = "run" ]; then
@@ -18,15 +20,12 @@ fi
 if [ "$command" = "clean" ]; then
     if [[ ! -d "Jakub-Salamon--narzedzia-do-debugowania" ]]
     then
-        echo [CLEAN]: Obecny katalog to Jakub-Salamon--narzedzia-do-debuggowania
+        echo [CLEAN]: Obecny katalog to Jakub-Salamon--narzedzia-do-debugowania
         cd .. 
     fi
-    echo [CLEAN]: usuwanie katalogu Jakub-Salamon--narzedzia-do-debuggowania
-    rm -rf Jakub-Salamon--narzedzia-do-debuggowania
+    echo [CLEAN]: usuwanie katalogu Jakub-Salamon--narzedzia-do-debugowania
+    rm -rf Jakub-Salamon--narzedzia-do-debugowania
 fi
 
 
-if [ "$command" = "solution" ]; then
-    wget http://www.perfectmotors.pl/solution_jakub_salamon.zip
-    unzip solution_jakub_salamon.zip
-fi
+
