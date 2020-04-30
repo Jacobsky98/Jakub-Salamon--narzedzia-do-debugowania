@@ -48,35 +48,12 @@ if [ "$command" = "clean" ]; then
 fi
 
 
-if [ "$command" = "solution" ]; then
-    echo [INFO]: Skrypt mozna zaktualizowac poleceniem update
-    echo
-    echo [SOL]: Rozwiazanie
-    echo
-    echo
-    echo W przypadku trudnosci nalezy uruchomić :
-    echo sudo groupadd docker
-    echo sudo usermod -aG docker \$USER
-    echo sudo chown \"\$USER\":\"\$USER\" /home/\"\$USER\"/.docker -R
-    echo sudo chmod g+rwx \"/home/\$USER/.docker\" -R
-    echo newgrp docker
-    echo 
-    echo Rozwiazania zadan znajduja sie w katalogu solution
-    echo zadanie 1: solution/z01
-    echo zadanie 2: solution/z02
-    echo zadanie 3: solution/z03
-    echo
-    echo Rozwiazania mozna testowac przy pomocy polecenia run w tym skrypcie
-    echo Dzieki temu urchomi sie docker z przygotowanym srodowiskiem
-    echo
-    wget http://www.perfectmotors.pl/solution_jakub_salamon.zip
-    unzip solution_jakub_salamon.zip
-fi
+
 
 if [ "$command" = "update" ]; then
     
-    wget http://www.perfectmotors.pl/update_jakub_salamon.zip
-    unzip update_jakub_salamon.zip
+    wget http://www.perfectmotors.pl/update_ws_jakub_salamon.zip
+    unzip update_ws_jakub_salamon.zip
     chmod +x run_salamon_jakub_new.sh
     echo [INFO]: Nowy skrypt znajduje sie pod nazwa run_salamon_jakub_new.sh
     ./run_salamon_jakub_new.sh info
